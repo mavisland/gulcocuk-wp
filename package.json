@@ -1,0 +1,27 @@
+{
+    "name": "gulcocuk",
+    "version": "1.1.0",
+    "description": "Gulcocuk Web Sitesi / Wordpress Tema Gelistirmesi",
+    "author": "mavisland",
+    "url": "http://tanjuyildiz.com",
+    "license": "MIT License",
+    "keywords": "gulp",
+    "devDependencies": {
+        "browser-sync": "*",
+        "es6-promise": "*",
+        "gulp": "*",
+        "gulp-autoprefixer": "*",
+        "gulp-cache": "*",
+        "gulp-clean-css": "*",
+        "gulp-concat": "*",
+        "gulp-header": "^1.8.9",
+        "gulp-imagemin": "*",
+        "gulp-jshint": "*",
+        "gulp-less": "*",
+        "gulp-notify": "*",
+        "gulp-plumber": "*",
+        "gulp-rename": "*",
+        "gulp-uglify": "*",
+        "jshint": "^2.9.5"
+    }
+}
