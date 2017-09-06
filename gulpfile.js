@@ -41,11 +41,11 @@ require('es6-promise').polyfill();
 
 // Set the banner content
 var banner = ['/*',
-  ' Theme Name:    Gulcocuk Anaokulu',
+  ' Theme Name:    Gülçocuk Anaokulu',
   ' Theme URI:     http://gulcocukanaokulu.k12.tr/',
-  ' Description:   Gulcocuk Anaokulu Web Sitesi',
+  ' Description:   Gülçocuk Anaokulu Web Sitesi',
   ' Version:       1.1.0',
-  ' Author:        Tanju Yildiz <ben@tanjuyildiz.com>',
+  ' Author:        Tanju Yıldız <ben@tanjuyildiz.com>',
   ' Author URI:    http://tanjuyildiz.com/',
   ' */',
   ''].join('\n');
@@ -124,7 +124,7 @@ gulp.task('scripts', function(){
     './src/components/fancybox/jquery.fancybox.pack.js',
     './src/components/isotope/isotope.min.js',
     './src/components/isotope/isotope-triger.min.js',
-    './src/components/countdown/jquery.syotimer.js',
+    // './src/components/countdown/jquery.syotimer.js',
     './src/components/selectbox/jquery.selectbox-0.1.3.min.js',
     './src/components/smoothscroll/SmoothScroll.min.js',
     './src/scripts/theme-custom.js'

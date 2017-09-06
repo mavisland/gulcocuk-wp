@@ -1,4 +1,3 @@
-		<!-- FOOTER -->
 		<footer>
 			<!-- FOOTER INFO -->
 			<div class="clearfix footer-info">
@@ -6,7 +5,6 @@
 					<div class="row">
 						<div class="col-sm-6 col-xs-12">
 							<div class="footer-inner">
-								<a href="index-2.html" class="footer-logo"><img src="img/logo-footer.png" alt="Image logo"></a>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud exercit.</p>
 								<ul class="list-unstyled list-address">
 									<li><i class="fa fa-map-marker" aria-hidden="true"></i> Hyperion Ave, Los Angeles, CA, USA</li>
@@ -70,19 +68,6 @@
 	<div class="scrolling">
 		<a href="#pageTop" class="backToTop hidden-xs" id="backToTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
 	</div>
-	<!-- JAVASCRIPTS -->
-	<script src="plugins/jquery/jquery.min.js"></script>
-	<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-	<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-	<script src="plugins/owl-carousel/owl.carousel.min.js"></script>
-	<script src="plugins/fancybox/jquery.fancybox.pack.js"></script>
-	<script src="plugins/isotope/isotope.min.js"></script>
-	<script src="plugins/isotope/isotope-triger.min.js"></script>
-	<script src="plugins/countdown/jquery.syotimer.js"></script>
-	<script src="plugins/selectbox/jquery.selectbox-0.1.3.min.js"></script>
-	<script src="plugins/smoothscroll/SmoothScroll.min.js"></script>
-	<script src="js/custom.js"></script>
-
 <?php wp_footer(); ?>
 </body>
 </html>
