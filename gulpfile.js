@@ -136,10 +136,9 @@ gulp.task('scripts', function(){
       this.emit('end');
     }))
     .pipe(concat('scripts.js'))
-    .pipe(gulp.dest('./js'))
     // Minify JS
     .pipe(uglify())
-    .pipe(gulp.dest('./js'))
+    .pipe(gulp.dest('./assets/js'))
     .pipe(reload({stream:true}))
     .pipe(notify({
       message: 'TASK: "scripts" Completed! 💯',
@@ -169,7 +168,7 @@ gulp.task('images', function(){
       interlaced: true,
       svgoPlugins: [{removeViewBox: false}]
     })))
-    .pipe(gulp.dest('./images'))
+    .pipe(gulp.dest('./assets/images'))
     .pipe(reload({stream:true}))
     .pipe(notify({
       message: 'TASK: "images" Completed! 💯',
@@ -203,7 +202,7 @@ gulp.task('copy:images', function(){
       interlaced: true,
       svgoPlugins: [{removeViewBox: false}]
     })))
-    .pipe(gulp.dest("./images"))
+    .pipe(gulp.dest("./assets/images"))
     .pipe(reload({stream:true}))
     .pipe(notify({
       message: 'TASK: "copy:images" Completed! 💯',
@@ -219,7 +218,7 @@ gulp.task('copy:fonts', function(){
     'src/components/bootstrap/fonts/*.{eot,svg,ttf,woff,woff2}',
     'src/components/font-awesome/fonts/*.{eot,svg,ttf,woff,woff2}'
   ])
-    .pipe(gulp.dest("./fonts"))
+    .pipe(gulp.dest("./assets/fonts"))
     .pipe(reload({stream:true}))
     .pipe(notify({
       message: 'TASK: "copy:fonts" Completed! 💯',
@@ -237,7 +236,7 @@ gulp.task('copy:scripts', function(){
     './src/components/html5shiv/html5shiv.min.js',
     './src/components/respond/respond.min.js',
   ])
-    .pipe(gulp.dest("./js"))
+    .pipe(gulp.dest("./assets/js"))
     .pipe(reload({stream:true}))
     .pipe(notify({
       message: 'TASK: "copy:scripts" Completed! 💯',
