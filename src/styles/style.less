@@ -1,4 +1,9 @@
-// Plugin CSS Styles
+@charset "UTF-8";
+
+// Core variables
+@import "base/variables.less";
+
+// Third-party Components
 @import "../components/jquery-ui/less/jquery-ui";
 @import "../components/bootstrap/less/bootstrap";
 @import "../components/font-awesome/less/font-awesome";
@@ -7,9 +12,6 @@
 @import (less) "../components/isotope/isotope.min.css";
 @import (less) "../components/selectbox/select_option1.css";
 
-// Wordpress Styles
-// @import "wordpress";
-
-// Custom CSS
-@import "theme-style";
-@import "theme-default";
+// Layouts
+@import "layouts/theme-style";
+@import "layouts/theme-default";

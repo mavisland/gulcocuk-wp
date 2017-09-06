@@ -105,3 +105,13 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+add_filter( 'body_class', 'custom_body_class' );
+function custom_body_class($classes) {
+	if (is_home()) {
+		$classes[] = "body-wrapper static";
+	} elseif ( is_page_template( 'page-example.php' ) ) {
+		$classes[] = 'example';
+	}
+	return $classes;
+}

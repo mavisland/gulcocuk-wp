@@ -46,7 +46,7 @@ var banner = ['/*',
   ' Description:   Gulcocuk Anaokulu Web Sitesi',
   ' Version:       1.1.0',
   ' Author:        Tanju Yildiz <ben@tanjuyildiz.com>',
-  ' Author URI:    http://weblebix.com/',
+  ' Author URI:    http://tanjuyildiz.com/',
   ' */',
   ''].join('\n');
 
@@ -97,7 +97,11 @@ gulp.task('styles', function(){
     // Minify compiled CSS
     .pipe(cleanCSS({
       compatibility: 'ie8',
-      keepSpecialComments: 0
+      level: {
+        1: {
+          specialComments: 0
+        }
+      }
     }))
     .pipe(header(banner))
     .pipe(gulp.dest('./'))
@@ -132,13 +136,10 @@ gulp.task('scripts', function(){
       this.emit('end');
     }))
     .pipe(concat('scripts.js'))
-    .pipe(gulp.dest('./js/'))
-    .pipe(rename({
-      suffix: '.min'
-    }))
+    .pipe(gulp.dest('./js'))
     // Minify JS
     .pipe(uglify())
-    .pipe(gulp.dest('./js/'))
+    .pipe(gulp.dest('./js'))
     .pipe(reload({stream:true}))
     .pipe(notify({
       message: 'TASK: "scripts" Completed! 💯',
@@ -147,13 +148,13 @@ gulp.task('scripts', function(){
 });
 
 /**
-  * Task: `images`.
-  *
-  * Minifies PNG, JPEG, GIF and SVG images.
-  *
-  * This task will run only once, if you want to run it
-  * again, do it with the command `gulp images`.
-  */
+ * Task: `images`.
+ *
+ * Minifies PNG, JPEG, GIF and SVG images.
+ *
+ * This task will run only once, if you want to run it
+ * again, do it with the command `gulp images`.
+ */
 gulp.task('images', function(){
   gulp.src(['src/images/**/*'])
     .pipe(plumber(function(error) {
@@ -176,32 +177,72 @@ gulp.task('images', function(){
     }))
 });
 
-// Copy vendor files from 'components' into 'dist'
-gulp.task('copy', function(){
-  // Vendor Javascript files
-  gulp.src([
-    './src/components/jquery/jquery.min.js',
-    './src/components/jquery-ui/jquery-ui.min.js',
-    './src/components/html5shiv/html5shiv.min.js',
-    './src/components/respond/respond.min.js',
-  ])
-    .pipe(gulp.dest('./scripts'));
+/**
+ * Task: `copy`.
+ */
+gulp.task('copy', ['copy:images', 'copy:fonts', 'copy:scripts']);
 
-  // Vendor assets files
+/**
+ * Task: `copy:images`.
+ *
+ * Minifies PNG, JPEG, GIF and SVG images.
+ *
+ * This task will run only once, if you want to run it
+ * again, do it with the command `gulp images`.
+ */
+gulp.task('copy:images', function(){
   gulp.src([
     "src/components/fancybox/images/*.{png,jpg,gif}",
     "src/components/jquery-ui/images/*.{png,jpg,gif}",
     "src/components/owl-carousel/images/*.{png,jpg,gif}",
     "src/components/seletbox/images/*.{png,jpg,gif}"
   ])
-    .pipe(gulp.dest("./images"));
+    .pipe(cache(imageMin({
+      progressive: true,
+      optimizationLevel: 3, // 0-7 low-high
+      interlaced: true,
+      svgoPlugins: [{removeViewBox: false}]
+    })))
+    .pipe(gulp.dest("./images"))
+    .pipe(reload({stream:true}))
+    .pipe(notify({
+      message: 'TASK: "copy:images" Completed! 💯',
+      onLast: true
+    }))
+});
 
-  // Custom fonts
-  gulp.src([
+/**
+ * Task: `copy:fonts`.
+ */
+gulp.task('copy:fonts', function(){
+  return gulp.src([
     'src/components/bootstrap/fonts/*.{eot,svg,ttf,woff,woff2}',
     'src/components/font-awesome/fonts/*.{eot,svg,ttf,woff,woff2}'
   ])
-    .pipe(gulp.dest('./fonts'));
+    .pipe(gulp.dest("./fonts"))
+    .pipe(reload({stream:true}))
+    .pipe(notify({
+      message: 'TASK: "copy:fonts" Completed! 💯',
+      onLast: true
+    }));
+});
+
+/**
+ * Task: `copy:scripts`.
+ */
+gulp.task('copy:scripts', function(){
+  return gulp.src([
+    './src/components/jquery/jquery.min.js',
+    './src/components/jquery-ui/jquery-ui.min.js',
+    './src/components/html5shiv/html5shiv.min.js',
+    './src/components/respond/respond.min.js',
+  ])
+    .pipe(gulp.dest("./js"))
+    .pipe(reload({stream:true}))
+    .pipe(notify({
+      message: 'TASK: "copy:scripts" Completed! 💯',
+      onLast: true
+    }));
 });
 
 /**
@@ -209,13 +250,19 @@ gulp.task('copy', function(){
   *
   * Watches for file changes and runs specific tasks.
   */
-gulp.task('default', ['styles', 'scripts', 'images', 'browser-sync'], function(){
+gulp.task('default', ['copy', 'styles', 'scripts', 'images', 'browser-sync'], function(){
   // Reload on PHP file changes.
   gulp.watch('./**/*.php', reload);
 
   // Reload on LESS file changes.
-  gulp.watch('src/styles/**/*.less', ['styles']);
+  gulp.watch([
+    'src/components/**/*.less',
+    'src/styles/**/*.less'
+  ], ['styles']);
 
-  // Reload on vendorsJs file changes.
+  // Reload on Javascript file changes.
   gulp.watch('src/scripts/**/*.js', ['scripts']);
+
+  // Reload on images changes.
+  gulp.watch('src/images/**/*', ['images']);
 });
