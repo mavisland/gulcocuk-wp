@@ -156,7 +156,7 @@ jQuery(document).ready(function() {
   $('#price-amount-1').val('$' + $('#price-range').slider('values', 0));
   $('#price-amount-2').val('$' + $('#price-range').slider('values', 1));
   $('.video-box img').click(function() {
-    var video = '<iframe class="embed-responsive-item"  allowfullscreen src="' + $(this).attr('data-video') + '"></iframe>';
+    var video = '<iframe class="embed-responsive-item" allowfullscreen src="' + $(this).attr('data-video') + '"></iframe>';
     $(this).replaceWith(video);
   });
 });

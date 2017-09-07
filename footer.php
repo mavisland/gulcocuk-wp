@@ -1,73 +1,99 @@
-		<footer>
-			<!-- FOOTER INFO -->
-			<div class="clearfix footer-info">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-6 col-xs-12">
-							<div class="footer-inner">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud exercit.</p>
-								<ul class="list-unstyled list-address">
-									<li><i class="fa fa-map-marker" aria-hidden="true"></i> Hyperion Ave, Los Angeles, CA, USA</li>
-									<li><i class="fa fa-phone" aria-hidden="true"></i> 3 (500)  657 5243</li>
-									<li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:someone@example.com" target="_top">Support@kidkite.com</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-sm-3 col-xs-12">
-							<div class="footer-inner">
-								<h4>Useful Links</h4>
-								<ul class="list-unstyled list-link">
-									<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#">Web Design</a></li>
-									<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#">About kidkite School</a></li>
-									<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#">Why kidkite School</a></li>
-									<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><a href="#">Social Media</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-sm-3 col-xs-12">
-							<div class="footer-inner">
-								<h4>Mailing List</h4>
-								<form class="form-footer">
-									<div class="form-group">
-										<input type="text" class="form-control" id="yourname" placeholder="Your Name">
-									</div>
-									<div class="form-group">
-										<input type="email" class="form-control" id="emailaddress" placeholder="Email address">
-									</div>
-									<div class="form-group">
-										<button type="button" class="btn btn-block btn-main">Subscribe Now</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- COPY RIGHT -->
-			<div class="clearfix copyRight">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-push-6 col-sm-6 col-xs-12">
-							<ul class="list-inline list-social">
-								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-							</ul>
-						</div>
-						<div class="col-sm-pull-6 col-sm-6 col-xs-12">
-							<p>© 2017 Copyright Kidkite Template by <a href="http://www.iamabdus.com/" target="_blank">Abdus.</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-	</div>
-	<!-- BACK TO TOP BUTTON -->
-	<div class="scrolling">
-		<a href="#pageTop" class="backToTop hidden-xs" id="backToTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
-	</div>
+    <footer>
+      <div class="clearfix footer-info">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-5">
+              <div class="footer-inner">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus ipsum, ornare ut volutpat a, ornare ut felis. Ut dignissim pretium placerat. Nullam justo augue, tincidunt ut elementum eget, volutpat sit amet felis. In in nibh id ante eleifend feugiat. Nam ultricies varius pretium. Vivamus turpis mi, maximus mattis ante ac, faucibus suscipit quam. Donec maximus ut ligula eget lobortis. Mauris consectetur sem sed bibendum accumsan. Integer efficitur tellus accumsan consectetur vestibulum.</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-sm-offset-1">
+              <div class="footer-inner">
+                <h4>Kurumsal</h4>
+                <ul class="list-unstyled list-link">
+                  <li>
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    <a href="#">Hakkımızda</a>
+                  </li>
+                  <li>
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    <a href="#">Vizyon &amp; Misyon</a>
+                  </li>
+                  <li>
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    <a href="#">Değerlerimiz</a>
+                  </li>
+                  <li>
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    <a href="#">Eğitim Kadromuz</a>
+                  </li>
+                  <li>
+                    <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    <a href="#">Fotoğraf Galerisi</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+              <div class="footer-inner">
+                <h4>Bize Ulaşın</h4>
+                <ul class="list-unstyled list-address">
+                  <li>
+                    <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                    <span class="text">Buhara Mah. İsmail Kaya Cad. Elekler Sok. No:36 Selçuklu / KONYA</span>
+                  </li>
+                  <li>
+                    <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <span class="text">0 332 244 0 240</span>
+                  </li>
+                  <li>
+                    <span class="icon"><i class="fa fa-fax" aria-hidden="true"></i></span>
+                    <span class="text">0 332 244 0 448</span>
+                  </li>
+                  <li>
+                    <span class="icon"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+                    <span class="text">0 332 244 0 448</span>
+                  </li>
+                  <li>
+                    <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                    <a href="#" class="text">info@gulcocukanaokulu.k12.tr</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix copyRight">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-sm-push-4">
+              <ul class="list-inline list-social">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-sm-pull-4">
+              <p>2017 &copy; <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>. Tüm Hakları Saklıdır.</p>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <div class="footer-brand">
+                <a href="#">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/datmedya.png" alt="Dat Medya">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div class="scrolling">
+    <a href="#pageTop" class="backToTop hidden-xs" id="backToTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+  </div>
 <?php wp_footer(); ?>
 </body>
 </html>
