@@ -15,7 +15,6 @@
           <div class="col-xs-12"></div>
         </div>
       </div>
-      <!-- <nav id="menuBar" class="navbar navbar-default lightHeader" role="navigation"> -->
       <nav id="menuBar" class="navbar" role="navigation">
         <div class="container">
           <div class="navbar-header">
